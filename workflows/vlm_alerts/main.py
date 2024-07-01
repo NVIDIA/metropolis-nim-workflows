@@ -24,6 +24,7 @@ import cv2
 from vlm import VLM 
 from queue import Queue 
 from api_server import FlaskServer 
+from time import sleep 
 
 
 response_dict = dict() 
@@ -94,8 +95,9 @@ def main(model_url, video_file, api_key, port, overlay=False, loop_video=False, 
     global overlay_response 
     global alert 
 
-    cv2.namedWindow("Demo", cv2.WINDOW_NORMAL) 
-    cv2.resizeWindow("Demo", 1280, 720) 
+    if overlay:
+        cv2.namedWindow("Demo", cv2.WINDOW_NORMAL) 
+        cv2.resizeWindow("Demo", 1280, 720) 
 
     prompt_queue = Queue() 
 
@@ -148,6 +150,8 @@ def main(model_url, video_file, api_key, port, overlay=False, loop_video=False, 
             cv2.imshow("Demo", frame)
             if cv2.waitKey(30) & 0xFF == ord('q'):
                 break 
+        else:
+            sleep(1/30)
 
     
     #clean up
