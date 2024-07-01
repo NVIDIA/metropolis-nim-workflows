@@ -9,28 +9,32 @@ For example, we can set the VLM NIM to monitor video input of drone footage that
 ![VLM Alert](readme_assets/vlm_alert.gif)
 
 ## Setup 
-Clone repo 
+
+### Clone repository
 ```
 git clone https://github.com/NVIDIA/metropolis-nim-workflows
 cd metropolis-nim-workflows/workflows/vlm_alerts
 ```
 
-It is recommened to setup a virtual environment to install the Python dependencies. Based on your OS, the commands a slightly different. For more resources on creating a virtual enviroment refer to the [Python documentation](https://docs.python.org/3/tutorial/venv.html). 
+### Make and activate virtual environment (Optional)
 
-Make and activate virtual environment (Mac & Linux) (optional)
+It is recommened to setup a virtual environment to install the Python dependencies. Based on your OS, the commands are slightly different. For more resources on creating a virtual enviroment refer to the [Python documentation](https://docs.python.org/3/tutorial/venv.html). 
+
+**Mac & Linux**
 ```
 python3 -m venv venv 
 source venv/bin/activate
 ```
 
-Make and activate virtual environment (Windows) (optional)
+**Windows**
 ```
 python3 -m venv venv 
 .\venv\Scripts\activate.bat
 ```
 
 
-Install dependencies
+### Install dependencies
+
 ```
 python3 -m pip install -r requirements.txt
 ```
