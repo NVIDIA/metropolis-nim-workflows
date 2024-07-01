@@ -15,11 +15,20 @@ git clone https://github.com/NVIDIA/metropolis-nim-workflows
 cd metropolis-nim-workflows/workflows/vlm_alerts
 ```
 
-Make virtual environment (optional)
+It is recommened to setup a virtual environment to install the Python dependencies. Based on your OS, the commands a slightly different. For more resources on creating a virtual enviroment refer to the [Python documentation](https://docs.python.org/3/tutorial/venv.html). 
+
+Make and activate virtual environment (Mac & Linux) (optional)
 ```
 python3 -m venv venv 
 source venv/bin/activate
 ```
+
+Make and activate virtual environment (Windows) (optional)
+```
+python3 -m venv venv 
+.\venv\Scripts\activate.bat
+```
+
 
 Install dependencies
 ```
@@ -62,7 +71,7 @@ options:
 For example 
 
 ```
-python3 main.py --model https://build.nvidia.com/liuhaotian/llava16-34b --video_file test_video.mp4 --api_key "nvapi-123" --overlay --loop_video
+python3 main.py --model https://ai.api.nvidia.com/v1/vlm/community/llava16-34b --video_file test_video.mp4 --api_key "nvapi-123" --overlay --loop_video
 ```
 
 ![VLM Output Example](readme_assets/query_example.png)
@@ -88,7 +97,7 @@ Once it is launched, you should see a window pop up with the video playing and t
 The --video_file is passed to the [OpenCV VideoCapture function](https://docs.opencv.org/4.x/d8/dfe/classcv_1_1VideoCapture.html) which supports both video files and RTSP streams. This means you can directly pass an RTSP stream link to the --video_file argument. For example:
 
 ```
-python3 main.py --model https://build.nvidia.com/liuhaotian/llava16-34b --video_file "rtsp://0.0.0.0:8554/stream" --api_key "nvapi-123" --overlay --loop_video
+python3 main.py --model https://ai.api.nvidia.com/v1/vlm/community/llava16-34b --video_file "rtsp://0.0.0.0:8554/stream" --api_key "nvapi-123" --overlay --loop_video
 ```
 
 The pipeline will then pull the frames from the RTSP stream to use as input. Support for RTSP streaming depends on your OS and installed media backends supported by OpenCV such as FFMPEG and GStreamer. If you have issues with RTSP streaming, please refer to the [OpenCV documentation](https://docs.opencv.org/4.x/d8/dfe/classcv_1_1VideoCapture.html#a31e7cf5ba9debaec15437a200b18241e). 
