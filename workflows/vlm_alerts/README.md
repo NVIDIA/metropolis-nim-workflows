@@ -75,7 +75,7 @@ options:
 For example 
 
 ```
-python3 main.py --model https://ai.api.nvidia.com/v1/vlm/community/llava16-34b --video_file test_video.mp4 --api_key "nvapi-123" --overlay --loop_video
+python3 main.py --model https://ai.api.nvidia.com/v1/vlm/nvidia/neva-22b --video_file test_video.mp4 --api_key "nvapi-123" --overlay --loop_video
 ```
 
 ![VLM Output Example](readme_assets/query_example.png)
@@ -83,8 +83,6 @@ python3 main.py --model https://ai.api.nvidia.com/v1/vlm/community/llava16-34b -
 
 All VLM nims are supported. The following list can be used in the --model_url argument of main.py 
 
-- https://ai.api.nvidia.com/v1/vlm/community/llava16-34b
-- https://ai.api.nvidia.com/v1/vlm/community/llava16-mistral-7b
 - https://ai.api.nvidia.com/v1/vlm/nvidia/neva-22b
 - https://ai.api.nvidia.com/v1/vlm/microsoft/kosmos-2
 - https://ai.api.nvidia.com/v1/vlm/adept/fuyu-8b
@@ -101,7 +99,7 @@ Once it is launched, you should see a window pop up with the video playing and t
 The --video_file is passed to the [OpenCV VideoCapture function](https://docs.opencv.org/4.x/d8/dfe/classcv_1_1VideoCapture.html) which supports both video files and RTSP streams. This means you can directly pass an RTSP stream link to the --video_file argument. For example:
 
 ```
-python3 main.py --model https://ai.api.nvidia.com/v1/vlm/community/llava16-34b --video_file "rtsp://0.0.0.0:8554/stream" --api_key "nvapi-123" --overlay --loop_video
+python3 main.py --model https://ai.api.nvidia.com/v1/vlm/nvidia/neva-22b --video_file "rtsp://0.0.0.0:8554/stream" --api_key "nvapi-123" --overlay --loop_video
 ```
 
 The pipeline will then pull the frames from the RTSP stream to use as input. Support for RTSP streaming depends on your OS and installed media backends supported by OpenCV such as FFMPEG and GStreamer. If you have issues with RTSP streaming, please refer to the [OpenCV documentation](https://docs.opencv.org/4.x/d8/dfe/classcv_1_1VideoCapture.html#a31e7cf5ba9debaec15437a200b18241e). 
