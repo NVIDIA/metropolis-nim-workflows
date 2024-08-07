@@ -1,0 +1,5 @@
+.ipynb_checkpoints
+.env
+__pycache__
+*.mp4
+venv
