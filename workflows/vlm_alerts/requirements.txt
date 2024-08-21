@@ -1,0 +1,10 @@
+notebook
+opencv-python
+requests
+pillow
+numpy
+flask
+gradio
+streamlit
+matplotlib 
+websockets
