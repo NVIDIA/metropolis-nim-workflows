@@ -1,0 +1,6 @@
+*.db
+*.lock
+**/__pycache__
+**/venv
+**/.ipynb_checkpoints
+dev_tests
