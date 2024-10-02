@@ -22,6 +22,7 @@ If you find this repository helpful, **leave a star** and **share the link** ðŸ™
 
 
 ## News :newspaper:
+- **10/1** - NV-CLIP NIM is available for local hosting from [build.nvidia.com](https://build.nvidia.com/nvidia/nvclip?snippet_tab=Docker). 
 - **9/25** - Llama 3.2 Vision NIM added to [build.nvidia.com](http://build.nvidia.com). Workflows updated to support Llama 3.2 Vision. 
 - **9/24** - Added VIA workflows 
 - **9/9** - VILA VLM NIM added to [build.nvidia.com](http://build.nvidia.com) 
