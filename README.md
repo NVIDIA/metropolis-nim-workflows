@@ -22,7 +22,9 @@ If you find this repository helpful, **leave a star** and **share the link** ðŸ™
 
 
 ## News :newspaper:
-- **10/1** - NV-CLIP NIM is available for local hosting from [build.nvidia.com](https://build.nvidia.com/nvidia/nvclip?snippet_tab=Docker). 
+- **10/31** - [Technical Blog](https://developer.nvidia.com/blog/build-multimodal-visual-ai-agents-powered-by-nvidia-nim/) released for NIM Workflows
+- **10/30** - VILA NIM is available for download from [build.nvidia.com](https://build.nvidia.com/nvidia/vila)
+- **10/1** - NV-CLIP NIM is available for download from [build.nvidia.com](https://build.nvidia.com/nvidia/nvclip?snippet_tab=Docker). 
 - **9/25** - Llama 3.2 Vision NIM added to [build.nvidia.com](http://build.nvidia.com). Workflows updated to support Llama 3.2 Vision. 
 - **9/24** - Added VIA workflows 
 - **9/9** - VILA VLM NIM added to [build.nvidia.com](http://build.nvidia.com) 
@@ -49,7 +51,7 @@ To access NIM Microservices, visit [build.nvidia.com](https://build.nvidia.com) 
 You can now continue to explore the workflows in the next sections. 
 
 ### NIM microservice workflows 
-
+v
 [NVIDIA NIMs](https://developer.nvidia.com/nim) are GPU-accelerated AI models wrapped in an easy to use REST API interface. To help developers get started, each NIM has a hosted preview API that is accessible after generating an API token from [build.nvidia.com](https://build.nvidia.com). The preview APIs can be used for **free** to develop and experiment with state of the art AI models including LLMs, VLMs, Embedding and CV models. 
 
 The workflows listed under this section make use of the preview APIs and do **not** require a local GPU! You can run these workflows on nearly any computer and each one is quick and easy to launch. Each workflow includes a Jupyter notebook workshop that walks through how to build with NIM Preview APIs in Python. 
@@ -90,6 +92,7 @@ If you find any bugs, have questions or want to start a discussion around the wo
 ## Related Resources :link:
 Relevant technical blogs that explore building AI Agents. 
 **Technical Blogs**      
+- [Build Multimodal Visual AI Agents Powered by NVIDIA NIM](https://developer.nvidia.com/blog/build-multimodal-visual-ai-agents-powered-by-nvidia-nim/)
 - [Visual AI Agents for Jetson](https://developer.nvidia.com/blog/develop-generative-ai-powered-visual-ai-agents-for-the-edge/)  
 - [VIA Deep Dive](https://developer.nvidia.com/blog/build-vlm-powered-visual-ai-agents-using-nvidia-nim-and-nvidia-via-microservices/)  
 
