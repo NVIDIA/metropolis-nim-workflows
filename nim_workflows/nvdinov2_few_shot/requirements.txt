@@ -1,0 +1,11 @@
+bokeh
+gradio
+pymilvus
+scikit-learn
+numpy
+pillow 
+tqdm
+datasets
+pymilvus
+matplotlib
+notebook
