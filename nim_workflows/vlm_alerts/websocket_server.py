@@ -24,19 +24,31 @@ class WebSocketServer:
         self.host = host
         self.port = port
         self.clients = set()
-        self.loop = asyncio.new_event_loop()
-        self.start_server = websockets.serve(
-            self.handler, self.host, self.port, loop=self.loop
-        )
+        self.loop = None  # Event loop for the server
 
     async def handler(self, websocket, path):
         self.clients.add(websocket)
         try:
             async for message in websocket:
-                # Handle incoming messages here if needed
-                pass
+                pass  # Handle incoming messages here
         finally:
             self.clients.remove(websocket)
+
+    async def start_server(self):
+        # Start the WebSocket server
+        server = await websockets.serve(self.handler, self.host, self.port)
+        await server.wait_closed()
+
+    def run(self):
+        def start_loop():
+            self.loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(self.loop)
+            try:
+                self.loop.run_until_complete(self.start_server())
+            finally:
+                self.loop.run_forever()
+
+        threading.Thread(target=start_loop, daemon=True).start()
 
     async def send_message(self, message):
         if self.clients:
@@ -45,12 +57,5 @@ class WebSocketServer:
             )
 
     def __call__(self, message):
-        asyncio.run_coroutine_threadsafe(self.send_message(message), self.loop)
-
-    def run(self):
-        def start_loop(loop):
-            asyncio.set_event_loop(loop)
-            loop.run_until_complete(self.start_server)
-            loop.run_forever()
-
-        threading.Thread(target=start_loop, args=(self.loop,)).start()
+        if self.loop:
+            asyncio.run_coroutine_threadsafe(self.send_message(message), self.loop)
