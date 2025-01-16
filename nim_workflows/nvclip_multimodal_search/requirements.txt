@@ -1,0 +1,14 @@
+numpy
+scikit-learn
+uvicorn
+fastapi
+bokeh
+gradio
+pymilvus
+requests
+seaborn
+matplotlib
+pillow
+tqdm 
+notebook
+opencv-python
